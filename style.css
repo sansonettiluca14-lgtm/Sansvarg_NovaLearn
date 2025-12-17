@@ -1,0 +1,36 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Poppins,sans-serif;
+}
+body{
+    background:#f0f4f8;
+    color:#111;
+}
+nav{
+    background:#111d5e;
+    color:#fff;
+    padding:15px;
+}
+nav a{
+    color:#fff;
+    margin-left:15px;
+    text-decoration:none;
+}
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+.btn{
+    background:#ffdd59;
+    border:none;
+    padding:12px 25px;
+    border-radius:8px;
+    cursor:pointer;
+}
+section{
+    padding:60px 0;
+    text-align:center;
+}
