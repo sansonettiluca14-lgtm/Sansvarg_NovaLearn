@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pricing – NovaLearn</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://www.paypal.com/sdk/js?client-id=BAAkG-FXxYga_FNSogVneiRPidsy1Xyx_5-isM0kwA7ygPTSXyYH3HxxQ9H0RcW_JLdAV25pUyDiR0F4Bw&components=hosted-buttons&currency=USD"></script>
+</head>
+<body>
+    <nav class="container">
+        <a href="index.html">Home</a>
+    </nav>
+
+    <section>
+        <h2>Premium – $19.99 / month</h2>
+        <p>Each quantity = 1 month</p>
+
+        <input id="promo" placeholder="Promo code">
+        <button class="btn" onclick="applyPromo()">Apply</button>
+
+        <div id="paypal-container-PE44VKVGLWKFA" style="display:none;margin-top:20px"></div>
+
+        <script>
+            function applyPromo(){
+                const p = document.getElementById("promo").value;
+                if(p === "TEST123"){
+                    localStorage.setItem("premium","true");
+                    window.location = "dashboard.html";
+                } else {
+                    document.getElementById("paypal-container-PE44VKVGLWKFA").style.display = "block";
+                    paypal.HostedButtons({
+                        hostedButtonId: "PE44VKVGLWKFA"
+                    }).render("#paypal-container-PE44VKVGLWKFA");
+                }
+            }
+        </script>
+    </section>
+</body>
+</html>
